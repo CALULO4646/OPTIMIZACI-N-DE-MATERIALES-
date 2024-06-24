@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de Materiales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Optimización de Materiales</h1>
+        <form id="calcForm">
+            <label for="area">Área (m²):</label>
+            <input type="number" id="area" step="any" required>
+
+            <label for="thickness">Espesor (m):</label>
+            <input type="number" id="thickness" step="any" required>
+
+            <label for="density">Densidad (kg/m³):</label>
+            <input type="number" id="density" step="any" required>
+
+            <label for="costPerUnit">Costo por Unidad ($/m³):</label>
+            <input type="number" id="costPerUnit" step="any" required>
+
+            <button type="button" onclick="calculate()">Calcular</button>
+            <button type="button" onclick="resetForm()">Restablecer</button>
+        </form>
+        <div id="results"></div>
+        <canvas id="resultsChartBar"></canvas>
+        <canvas id="resultsChartLine"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
